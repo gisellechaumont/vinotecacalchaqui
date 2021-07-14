@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-//REACT BOOTSTRAP -
+//BOOTSTRAP 
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'

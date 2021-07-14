@@ -24,6 +24,7 @@ const [productos, setProductos] = useState([]);
           titulo={productos.nombre}
           imagen={productos.imagen}
           precio={productos.precio}
+          id={productos.id}
         />
       );
     });

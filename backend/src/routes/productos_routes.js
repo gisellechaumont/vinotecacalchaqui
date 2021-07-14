@@ -17,18 +17,16 @@ router.get( '/', (req, res) => {
 }); 
 
 
-router.get( '/:id', (req, res) => {
-    const idProducto = req.params.id;
-
-    const sql = `SELECT * FROM productos WHERE id = ?`;
-
-    connection.query(sql, [idProducto], (error, result) => {
-        if (error) {
-            res.send ('Error al obtener el producto')
-        }else {
-            res.json (result)
-        }
-    })
-}); 
+router.get('/:id', (req, res) => {
+    const sql = 'SELECT * FROM productos WHERE id= ?';
+  
+    connection.query(sql, [req.params.id], (err, result) => {
+      if (err) {
+        res.send('Error al obtener la publicacion');
+      } else {
+        res.json(result[0]);
+      }
+    });
+  });
 
 module.exports = router;

@@ -74,7 +74,7 @@ export default function NavigationBar(props) {
     return (
         <>
     <Navbar style= {{backgroundColor: '#f5f5ef' }} expand="lg">
-    <Navbar.Brand href="#home"> 
+    <Navbar.Brand href="http://localhost:3000"> 
         <img src={logoVinoteca} style={ navStyle } alt="Vinoteca Calchaqui"/>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -84,7 +84,7 @@ export default function NavigationBar(props) {
 
         { props.user ? (
             <>
-        <Nav.Link href="#home">Inicio</Nav.Link>
+        <Nav.Link href="http://localhost:3000">Inicio</Nav.Link>
         <NavDropdown alignRight title={props.user.name} id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Mi cuenta</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Mis pedidos</NavDropdown.Item>
@@ -98,7 +98,7 @@ export default function NavigationBar(props) {
     ) : (
 
         <>
-        <Nav.Link href="#home">Inicio</Nav.Link>
+        <Nav.Link href="http://localhost:3000">Inicio</Nav.Link>
         <NavDropdown alignRight title="Productos" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Vinos</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Bodegas</NavDropdown.Item>
