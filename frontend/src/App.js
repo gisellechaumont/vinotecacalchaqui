@@ -14,6 +14,7 @@ import NotFound from './components/NotFound';
 
 //REACT ROUTER DOM
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -52,6 +53,7 @@ function App() {
 
   <NotFound />
 </Switch>
+  <Footer />
   </BrowserRouter>
 
 
