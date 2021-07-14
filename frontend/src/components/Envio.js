@@ -8,11 +8,12 @@ export default function Envio() {
     const envioStyle = {
         backgroundColor: '#a3a3a3',
         backgroundColorSize: 'cover',
+        padding: '1vh',
         width: '100%',
         height: '5vh',
     }
     return (
-        <Container className="d-flex justify-content-center" style={envioStyle}>
+        <Container fluid className="d-flex justify-content-center" style={envioStyle}>
         <Row>
             ENVÍO GRATIS A TODO EL PAÍS PARA COMPRAS MAYORES A $5000 
         </Row>

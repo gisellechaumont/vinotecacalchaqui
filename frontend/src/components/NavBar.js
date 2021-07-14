@@ -12,7 +12,7 @@ import logoVinoteca from '../assets/images/LogoVinoteca.png';
 //MODAL
 import LoginModal from "./LoginModal";
 
-export default function NavigationBar() {
+export default function NavigationBar(props) {
     const [showLoginModal, setShowLoginModal] = useState(false);
     
     const navStyle = {
@@ -48,12 +48,27 @@ export default function NavigationBar() {
     const data = await response.json();
 
     if (response.status === 200) {
-        alert('Usuario valido');
+        props.updateUser({name: data.data});
+        handleCloseLoginModal();
         } else {
-        alert('Usuario invalido'); }
+        alert(data.message); }
         
         console.log(data);
     };
+
+    const handleLogout = async () => {
+        const url = 'http://localhost:8000/auth';
+
+        const response = await fetch(url, 
+            {method: 'DELETE', 
+            credentials: 'include', });
+
+        if (response.status === 200){
+            props.updateUser(null);
+        }else{
+            alert('data.message')
+        }
+    }
   
 
     return (
@@ -66,6 +81,23 @@ export default function NavigationBar() {
     <Navbar.Collapse id="basic-navbar-nav">
     
     <Nav className="ml-auto">
+
+        { props.user ? (
+            <>
+        <Nav.Link href="#home">Inicio</Nav.Link>
+        <NavDropdown alignRight title={props.user.name} id="basic-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Mi cuenta</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Mis pedidos</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Favoritos</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.4">Lista de deseos</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item onClick={handleLogout}>Cerrar sesión</NavDropdown.Item>
+        </NavDropdown>
+        </>
+
+    ) : (
+
+        <>
         <Nav.Link href="#home">Inicio</Nav.Link>
         <NavDropdown alignRight title="Productos" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Vinos</NavDropdown.Item>
@@ -76,6 +108,10 @@ export default function NavigationBar() {
         <NavDropdown.Item href="#action/3.5">Recomendados</NavDropdown.Item>
         </NavDropdown>
         <Button variant="dark" onClick={handleLoginClick}>Mi cuenta</Button>
+        
+        </>
+        )}
+
     </Nav>
     </Navbar.Collapse>
     </Navbar>
