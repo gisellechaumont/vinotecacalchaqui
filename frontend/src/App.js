@@ -11,6 +11,7 @@ import PubliDetail from './components/PubliDetail';
 import Envio from './components/Envio';
 import SearchBar from './components/SearchBar';
 import NotFound from './components/NotFound';
+import Header from './components/Header';
 
 //REACT ROUTER DOM
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -42,8 +43,10 @@ function App() {
   <SearchBar /> 
   
   <Switch>
+  
 
   <Route exact path='/'>
+    <Header type="header" /> 
     <PubliList type="productos" />
   </Route> 
 

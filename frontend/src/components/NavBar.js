@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
 
 //REACT BOOTSTRAP
 import Navbar from "react-bootstrap/Navbar"
@@ -86,12 +87,11 @@ export default function NavigationBar(props) {
             <>
         <Nav.Link href="http://localhost:3000">Inicio</Nav.Link>
         <NavDropdown alignRight title={props.user.name} id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Mi cuenta</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Mis pedidos</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Favoritos</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.4">Lista de deseos</NavDropdown.Item>
+        <NavDropdown.Item href=""><Link to="/micuenta" className="nav-link">Mi cuenta</Link></NavDropdown.Item>
+        <NavDropdown.Item href="#"><Link to="/mispedidos" className="nav-link">Mis pedidos</Link></NavDropdown.Item>
+        <NavDropdown.Item href=""><Link to="/misfavoritos" className="nav-link">Mis favoritos</Link> </NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item onClick={handleLogout}>Cerrar sesión</NavDropdown.Item>
+        <NavDropdown.Item onClick={handleLogout} style={{ color: '	#FF0000' }}>Cerrar sesión</NavDropdown.Item>
         </NavDropdown>
         </>
 
