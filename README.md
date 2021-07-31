@@ -1,3 +1,6 @@
-# vinotecacalchaqui
+# Vinoteca Calchaqui 
 
-Este proyecto continua en desarrollo 🔧
+Este proyecto fue creado en el curso de Desarrollo FullStack con REACT de Comunidad IT.
+
+Continua en desarrollo 🔧
+
