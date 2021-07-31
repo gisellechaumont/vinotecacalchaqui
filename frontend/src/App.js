@@ -12,6 +12,8 @@ import Envio from './components/Envio';
 import SearchBar from './components/SearchBar';
 import NotFound from './components/NotFound';
 import Header from './components/Header';
+import ProductosTitulo from './components/ProductosTitulo';
+
 
 //REACT ROUTER DOM
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -37,7 +39,7 @@ function App() {
   };
 
   return ( 
-  <BrowserRouter> 
+  <BrowserRouter>
   <Envio /> 
   <NavigationBar user={user}  updateUser={updateUser} /> 
   <SearchBar /> 
@@ -47,6 +49,7 @@ function App() {
 
   <Route exact path='/'>
     <Header type="header" /> 
+    <ProductosTitulo />
     <PubliList type="productos" />
   </Route> 
 

@@ -86,6 +86,14 @@ export default function NavigationBar(props) {
         { props.user ? (
             <>
         <Nav.Link href="http://localhost:3000">Inicio</Nav.Link>
+        <NavDropdown alignRight title="Categorías" id="basic-nav-dropdown">
+        <NavDropdown.Item className="nav-link" href="">Vinos</NavDropdown.Item>
+        <NavDropdown.Item className="nav-link" href="">Bodegas</NavDropdown.Item>
+        <NavDropdown.Item className="nav-link" href="">Variedades</NavDropdown.Item>
+        <NavDropdown.Item className="nav-link" href="">Vinos por caja</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item className="nav-link" href="#action/3.5">Recomendados</NavDropdown.Item>
+        </NavDropdown>
         <NavDropdown alignRight title={props.user.name} id="basic-nav-dropdown">
         <NavDropdown.Item href=""><Link to="/micuenta" className="nav-link">Mi cuenta</Link></NavDropdown.Item>
         <NavDropdown.Item href="#"><Link to="/mispedidos" className="nav-link">Mis pedidos</Link></NavDropdown.Item>
@@ -99,13 +107,13 @@ export default function NavigationBar(props) {
 
         <>
         <Nav.Link href="http://localhost:3000">Inicio</Nav.Link>
-        <NavDropdown alignRight title="Productos" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Vinos</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Bodegas</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Variedades</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.4">Vinos por caja</NavDropdown.Item>
+        <NavDropdown alignRight title="Categorías" id="basic-nav-dropdown">
+        <NavDropdown.Item className="nav-link" href="">Vinos</NavDropdown.Item>
+        <NavDropdown.Item className="nav-link" href="">Bodegas</NavDropdown.Item>
+        <NavDropdown.Item className="nav-link" href="">Variedades</NavDropdown.Item>
+        <NavDropdown.Item className="nav-link" href="">Vinos por caja</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.5">Recomendados</NavDropdown.Item>
+        <NavDropdown.Item className="nav-link" href="#action/3.5">Recomendados</NavDropdown.Item>
         </NavDropdown>
         <Button variant="dark" onClick={handleLoginClick}>Mi cuenta</Button>
         

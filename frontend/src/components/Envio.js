@@ -8,6 +8,7 @@ export default function Envio() {
     const envioStyle = {
         backgroundColor: '#a3a3a3',
         backgroundColorSize: 'cover',
+        fontSize: '3vh',
         padding: '1vh',
         width: '100%',
         height: '5vh',
