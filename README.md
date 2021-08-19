@@ -1,12 +1,12 @@
 ### Vinoteca Calchaqui 
 
-# Este proyecto fue creado en el curso de Desarrollo FullStack con REACT de Comunidad IT.
+# Este proyecto fue creado en el curso de Desarrollo FullStack con REACT de Comunidad IT 🌞
 
 Es una tienda online de vinos del NOA. 
 
 ## Tecnologías utilizadas:
 
-
+<img src = "https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white">
 <img src="https://img.shields.io/badge/-JavaScript-eed718?style=flat&logo=javascript&logoColor=ffffff">
 <img src="https://img.shields.io/badge/-React-000000?style=flat&logo=react&logoColor=00c8ff">
